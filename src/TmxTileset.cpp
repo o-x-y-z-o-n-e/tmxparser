@@ -131,7 +131,11 @@ namespace Tmx
             assert(tilesetNode); //RJCB
 
             tilesetElem = tilesetNode->ToElement();
-        }
+
+			source = source_name;
+		} else {
+			source = "";
+		}
 
         tile_width = tilesetElem->IntAttribute("tilewidth");
         tile_height = tilesetElem->IntAttribute("tileheight");
